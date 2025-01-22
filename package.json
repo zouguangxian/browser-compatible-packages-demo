@@ -1,0 +1,24 @@
+{
+  "name": "monorepo",
+  "version": "1.0.0",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "repository": "https://github.com/zouguangxian/browser-compatible-packages-demo.git",
+  "author": "Zou Guangxian <zouguangxian@gmail.com>",
+  "license": "MIT",
+  "packageManager": "yarn@4.5.1",
+  "scripts": {
+    "build": "yarn workspaces foreach -A -t run build",
+    "lint": "yarn workspaces foreach -A -t run lint"
+  },
+  "dependencies": {
+    "@example/utils": "workspace:^"
+  },
+  "devDependencies": {
+    "lint-staged": "^15.4.1",
+    "prettier": "^3.4.2",
+    "prettier-plugin-packagejson": "^2.5.8"
+  }
+}
