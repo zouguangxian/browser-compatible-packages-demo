@@ -108,3 +108,10 @@ const nextConfig: NextConfig = {
 
 export default nextConfig;
 ```
+
+## Troubleshooting
+When using pnp mode or pnpm mode, it may report an error like this:
+```shell
+error TS2307: Cannot find module 'fs' or its corresponding type declarations.
+```
+Setting `nodeLinker` to `node-modules` in the [.yarnrc.yml](./.yarnrc.yml) file can solve this problem.
