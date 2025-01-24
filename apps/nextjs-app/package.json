@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@example/utils": "workspace:^",
+    "@layerzerolabs/oft-v2-solana-sdk": "^3.0.53",
     "next": "15.1.5",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
