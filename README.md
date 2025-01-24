@@ -109,6 +109,37 @@ const nextConfig: NextConfig = {
 export default nextConfig;
 ```
 
+### **Set `resolve.alias` to module in `vite.config.ts` (for Vite App)**
+```typescript
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import { nodePolyfills } from 'vite-plugin-node-polyfills'
+import * as path from 'path'
+
+// https://vite.dev/config/
+export default defineConfig({
+  plugins: [react(), nodePolyfills({
+    exclude: ['module'], // Exclude the unwanted modules
+  })],
+
+  resolve: {
+    alias: {
+      module: path.resolve(__dirname, './src/polyfills/module.js'), // Alias 'module' to an empty module
+    },
+  },
+})
+```
+and the `src/polyfills/module.js` contains:
+```typescript
+export function createRequire() {
+    console.warn(`createRequire is not supported in the browser environment.`);
+    return function (path) {
+      console.warn(`Attempted to use require() in the browser. Path: ${path}`);
+      return {};
+    };
+  }
+```
+
 ## Troubleshooting
 When using pnp mode or pnpm mode, it may report an error like this:
 ```shell
