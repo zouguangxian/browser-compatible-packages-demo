@@ -2,13 +2,13 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import {hello} from '@example/utils';
+// import {hello} from '@example/utils';
 import * as oftSdk from '@layerzerolabs/oft-v2-solana-sdk';
 
 
 function App() {
   const [count, setCount] = useState(0)
-  hello();
+  // hello();
   console.log(oftSdk)
 
   return (
