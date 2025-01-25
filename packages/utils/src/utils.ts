@@ -1,7 +1,7 @@
 import fs from "fs";
 import * as path from 'path';
 import * as process from 'process';
-import { createRequire } from 'module';
+import module from 'module';
 
 export function readFile(filename: string): string {
   return fs.readFileSync(filename, "utf-8");
@@ -20,5 +20,5 @@ export function cwd():string {
 }
 
 export function myRequire(path:string):void {
-  const retval = createRequire(path);
+  const retval = module.createRequire(path);
 }
