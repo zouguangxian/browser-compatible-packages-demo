@@ -1,7 +1,7 @@
 'use client'
 
 import Image from "next/image";
-import {hello, myRequire} from '@example/utils';
+import {hello} from '@example/utils';
 
 export default function Home() {
   hello();
