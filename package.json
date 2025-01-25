@@ -12,6 +12,7 @@
   "scripts": {
     "dev": "yarn workspaces foreach -A -t run dev",
     "build": "yarn workspaces foreach -A -t run build",
+    "clean": "yarn workspaces foreach -A -t run clean",
     "lint": "yarn workspaces foreach -A -t run lint"
   },
   "resolutions": {
