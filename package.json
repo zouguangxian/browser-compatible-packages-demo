@@ -16,7 +16,8 @@
     "lint": "yarn workspaces foreach -A -t run lint"
   },
   "resolutions": {
-    "@layerzerolabs/lz-utilities": "^3.0.53"
+    "@layerzerolabs/oft-v2-solana-sdk": "^3.0.57",
+    "@layerzerolabs/lz-utilities": "^3.0.57"
   },
   "dependencies": {
     "@example/utils": "workspace:^"
