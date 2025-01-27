@@ -3,13 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "next dev",
+    "clean": "rimraf .next",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
     "@example/utils": "workspace:^",
+    "@layerzerolabs/oft-v2-solana-sdk": "^3.0.57",
     "next": "15.1.5",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
@@ -22,6 +24,7 @@
     "eslint": "^9",
     "eslint-config-next": "15.1.5",
     "postcss": "^8",
+    "rimraf": "^6.0.1",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
   }
