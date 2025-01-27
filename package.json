@@ -15,6 +15,9 @@
     "clean": "yarn workspaces foreach -A -t run clean",
     "lint": "yarn workspaces foreach -A -t run lint"
   },
+  "resolutions": {
+    "@layerzerolabs/*": "^3.0.57"
+  },
   "dependencies": {
     "@example/utils": "workspace:^"
   },
