@@ -15,10 +15,6 @@
     "clean": "yarn workspaces foreach -A -t run clean",
     "lint": "yarn workspaces foreach -A -t run lint"
   },
-  "resolutions": {
-    "@layerzerolabs/oft-v2-solana-sdk": "^3.0.57",
-    "@layerzerolabs/lz-utilities": "^3.0.57"
-  },
   "dependencies": {
     "@example/utils": "workspace:^"
   },
