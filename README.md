@@ -141,8 +141,18 @@ export function createRequire() {
 ```
 
 ## Troubleshooting
+### error TS2307: Cannot find module 'fs' or its corresponding type declarations.
 When using pnp mode or pnpm mode, it may report an error like this:
 ```shell
 error TS2307: Cannot find module 'fs' or its corresponding type declarations.
 ```
 Setting `nodeLinker` to `node-modules` in the [.yarnrc.yml](./.yarnrc.yml) file can solve this problem.
+
+### "readdirSync" is not exported by
+If you got the error like this when building a vite project:
+```shell
+[vite-project]: ../../node_modules/vm-browserify/index.js (110:11): Use of eval in "../../node_modules/vm-browserify/index.js" is strongly discouraged as it poses security risks and may cause issues with minification.
+[vite-project]: ../../node_modules/@protobufjs/inquire/index.js (12:18): Use of eval in "../../node_modules/@protobufjs/inquire/index.js" is strongly discouraged as it poses security risks and may cause issues with minification.
+[vite-project]: ../../node_modules/@layerzerolabs/lz-utilities/dist/index.mjs (515:24): "readdirSync" is not exported by "../../node_modules/node-stdlib-browser/esm/mock/empty.js", imported by "../../node_modules/@layerzerolabs/lz-utilities/dist/index.mjs".
+```
+It is a warning but it still can build the project successfully.
